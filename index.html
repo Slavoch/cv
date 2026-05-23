@@ -1,10 +1,382 @@
-<!DOCTYPE html>
-<html>
+﻿<!DOCTYPE html>
+<html lang="en">
 <head>
-    <title>Test</title>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vyacheslav Kovalev - CV Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <h1>Test</h1>
+    <header class="site-header">
+        <div class="page-shell nav">
+            <a class="brand" href="#top">Vyacheslav Kovalev</a>
+            <nav class="nav-links" aria-label="Main navigation">
+                <a href="#about">About</a>
+                <a href="#experience">Experience</a>
+                <a href="#education">Education</a>
+                <a href="#skills">Skills</a>
+                <a href="#portfolio">Portfolio</a>
+                <a href="#publications">Publications</a>
+                <a href="#contact">Contact</a>
+            </nav>
+        </div>
+    </header>
+
+    <main id="top">
+        <section class="hero page-shell" aria-labelledby="hero-title">
+            <div>
+                <p class="eyebrow">RL Engineer & Robotics Researcher</p>
+                <h1 id="hero-title">Vyacheslav Kovalev</h1>
+                <div class="hero-actions">
+                    <a class="button primary" href="#portfolio">View Portfolio</a>
+                    <a class="button" href="cv.pdf" download>Download CV</a>
+                    <a class="button" href="#contact">Contact</a>
+                </div>
+            </div>
+        </section>
+
+        <section id="about" class="page-shell" aria-labelledby="about-title">
+            <div class="section-header">
+                <h2 id="about-title">About</h2>
+            </div>
+            <article class="card">
+                <h3>Professional Summary</h3>
+                <p>
+                    RL Engineer and robotics researcher with about 4 years of experience in reinforcement
+                    learning, model predictive control, and sim-to-real deployment for legged and humanoid
+                    robots. Experienced across the full robotics development cycle: simulation, policy
+                    training, C++/ROS 2 deployment, hardware validation, and publication-quality research.
+                </p>
+            </article>
+        </section>
+
+        <section id="experience" class="page-shell" aria-labelledby="experience-title">
+            <div class="section-header">
+                <h2 id="experience-title">Experience</h2>
+            </div>
+            <div class="grid two">
+                <article class="card">
+                    <p class="meta">June 2024 - Present</p>
+                    <h3>RL Engineer, MIPT</h3>
+                    <p>Laboratory of Wave Processes and Controlling Systems</p>
+                    <ul class="responsibility-list">
+                        <li>Developed and trained RL policies for humanoid robots, including walking, soccer skills, balance recovery, and trajectory-following dance motions.</li>
+                        <li>Built and tuned simulations in NVIDIA Isaac Sim, Isaac Gym, MuJoCo, and PyBullet, including dynamics, contacts, and sensor configuration.</li>
+                        <li>Deployed trained policies to real robots using high-performance C++ and ROS/ROS 2 hardware integration pipelines.</li>
+                        <li>Reduced the sim-to-real gap using domain randomization, validation stands, sensor calibration, and noise filtering.</li>
+                        <li>Developed an MJX differentiable-simulation method for robot parameter identification from motion tracks, without torque sensors.</li>
+                        <li>Achieved a 75% reduction in turning deviation, a 46% increase in traveled distance, and 1.88x better trajectory tracking accuracy on custom hardware.</li>
+                    </ul>
+                </article>
+                <article class="card">
+                    <p class="meta">August 2021 - May 2023</p>
+                    <h3>Research Assistant, Skoltech</h3>
+                    <p>Skolkovo Institute of Science and Technology</p>
+                    <ul class="responsibility-list">
+                        <li>Developed a hybrid MPC + RL control algorithm for quadruped robot locomotion as the main developer of the MPC component.</li>
+                        <li>Built the robot dynamics model and implemented model predictive control in C++ with kinematic and dynamic constraints.</li>
+                        <li>Completed sim-to-real transfer from Gazebo simulation to physical hardware using RL policy training, domain randomization, deployment, and real-robot validation.</li>
+                        <li>Integrated control modules through ROS/ROS 2 nodes, topics, services, and actions.</li>
+                    </ul>
+                </article>
+            </div>
+        </section>
+
+        <section id="education" class="page-shell" aria-labelledby="education-title">
+            <div class="section-header">
+                <h2 id="education-title">Education</h2>
+            </div>
+            <div class="timeline">
+                <article class="timeline-item">
+                    <p class="meta">Expected 2027</p>
+                    <h3>PhD Candidate, System Analysis, Control, Information Processing, and Statistics</h3>
+                    <p>Moscow Institute of Physics and Technology</p>
+                </article>
+                <article class="timeline-item">
+                    <p class="meta">2023</p>
+                    <h3>MSc, Information Systems and Technologies</h3>
+                    <p>Skolkovo Institute of Science and Technology</p>
+                </article>
+            </div>
+        </section>
+
+        <section id="skills" class="page-shell" aria-labelledby="skills-title">
+            <div class="section-header">
+                <h2 id="skills-title">Skills</h2>
+            </div>
+            <div class="grid two">
+                <article class="card">
+                    <h3>Advanced</h3>
+                    <ul class="tag-list">
+                        <li>Python</li>
+                        <li>PyTorch</li>
+                        <li>Reinforcement Learning</li>
+                        <li>Sim-to-Real</li>
+                        <li>MPC</li>
+                        <li>NVIDIA Isaac Sim</li>
+                        <li>Isaac Gym</li>
+                        <li>MuJoCo</li>
+                        <li>Stable-Baselines3</li>
+                        <li>PPO</li>
+                    </ul>
+                </article>
+                <article class="card">
+                    <h3>Intermediate</h3>
+                    <ul class="tag-list">
+                        <li>Linux</li>
+                        <li>C++</li>
+                        <li>Git</li>
+                        <li>ROS/ROS 2</li>
+                        <li>PyBullet</li>
+                        <li>Gazebo</li>
+                        <li>Docker</li>
+                        <li>skrl</li>
+                    </ul>
+                </article>
+            </div>
+        </section>
+
+        <section id="portfolio" class="page-shell" aria-labelledby="portfolio-title">
+            <div class="section-header">
+                <h2 id="portfolio-title">Portfolio</h2>
+            </div>
+            <div class="portfolio-grid">
+                <article class="portfolio-card">
+                    <div class="media-frame media-pair">
+                        <figure>
+                            <img src="sources/motors_before_identification.gif" alt="Simulated motor trajectory before differentiable simulation identification" loading="lazy">
+                            <figcaption>Before identification</figcaption>
+                        </figure>
+                        <figure>
+                            <img src="sources/motors_after_identification.gif" alt="Simulated motor trajectory after fitting to measured real motor trajectory" loading="lazy">
+                            <figcaption>After identification</figcaption>
+                        </figure>
+                    </div>
+                    <div class="portfolio-content">
+                        <p class="meta">System Identification | Differentiable Simulation</p>
+                        <h3>Motor Parameter Identification</h3>
+                        <p>
+                            Measured the real motor trajectory shown in green and fitted the gray simulated
+                            trajectory by optimizing motor parameters with a differentiable simulator. This
+                            produces a precise model that behaves in simulation like the real hardware.
+                        </p>
+                        <ul class="tag-list">
+                            <li>MJX</li>
+                            <li>Real Trajectory</li>
+                            <li>Parameter Optimization</li>
+                        </ul>
+                        <a class="portfolio-link" href="https://wavegit.mipt.ru/Slavoch/mjx_sysid">Project repository</a>
+                    </div>
+                </article>
+
+                <article class="portfolio-card">
+                    <div class="media-frame">
+                        <video controls muted loop playsinline preload="metadata">
+                            <source src="sources/servant_dance_real.mp4" type="video/mp4">
+                            Your browser does not support video playback.
+                        </video>
+                    </div>
+                    <div class="portfolio-content">
+                        <p class="meta">Servant | Real Robot</p>
+                        <h3>Servant Dance Motion</h3>
+                        <p>
+                            Hip-hop dance motion learned from human mocap data and transferred to the real
+                            Servant humanoid robot.
+                        </p>
+                        <ul class="tag-list">
+                            <li>Human Mocap</li>
+                            <li>Hip-Hop Dance</li>
+                            <li>Sim-to-Real</li>
+                        </ul>
+                    </div>
+                </article>
+
+                <article class="portfolio-card">
+                    <div class="media-frame">
+                        <img src="sources/servant_dance_sim.gif" alt="Servant humanoid dance motion in simulation" loading="lazy">
+                    </div>
+                    <div class="portfolio-content">
+                        <p class="meta">Servant | Simulation</p>
+                        <h3>Servant Dance Simulation</h3>
+                        <p>
+                            Hip-hop dance motion learned from human mocap data and tested in simulation
+                            before transfer to the real Servant humanoid robot.
+                        </p>
+                        <ul class="tag-list">
+                            <li>Human Mocap</li>
+                            <li>Hip-Hop Dance</li>
+                            <li>Sim-to-Real</li>
+                        </ul>
+                    </div>
+                </article>
+
+                <article class="portfolio-card">
+                    <div class="media-frame">
+                        <video controls muted loop playsinline preload="metadata">
+                            <source src="sources/servant_run_real.mp4" type="video/mp4">
+                            Your browser does not support video playback.
+                        </video>
+                    </div>
+                    <div class="portfolio-content">
+                        <p class="meta">Servant | Real Robot</p>
+                        <h3>Servant Running</h3>
+                        <p>
+                            Real-hardware locomotion on a unique custom humanoid robot, where we solved many
+                            sim-to-real issues. The motion goes beyond mimicry: look at the human-like
+                            heel-toe walking style.
+                        </p>
+                        <ul class="tag-list">
+                            <li>Unique Hardware</li>
+                            <li>Sim-to-Real</li>
+                            <li>Heel-Toe Walk</li>
+                        </ul>
+                    </div>
+                </article>
+
+                <article class="portfolio-card">
+                    <div class="media-frame">
+                        <img src="sources/servant_wave_sim.gif" alt="Servant humanoid waving behavior in simulation" loading="lazy">
+                    </div>
+                    <div class="portfolio-content">
+                        <p class="meta">Servant | Simulation</p>
+                        <h3>Servant Wave Motion</h3>
+                        <p>
+                            Servant wave motion learned from human motion data and tested in simulation.
+                        </p>
+                        <ul class="tag-list">
+                            <li>Human Motion Data</li>
+                            <li>Step Forward/Back</li>
+                            <li>Simulation Test</li>
+                        </ul>
+                    </div>
+                </article>
+
+                <article class="portfolio-card">
+                    <div class="media-frame">
+                        <video controls muted loop playsinline preload="metadata">
+                            <source src="sources/k1_football_real.mp4" type="video/mp4">
+                            Your browser does not support video playback.
+                        </video>
+                    </div>
+                    <div class="portfolio-content">
+                        <p class="meta">Booster K1 | Real Robot</p>
+                        <h3>K1 Football Skill</h3>
+                        <p>
+                            Reward engineering approach for Booster K1: learned walking and football-play
+                            behavior using rewards only, without demonstrations.
+                        </p>
+                        <ul class="tag-list">
+                            <li>Reward Engineering</li>
+                            <li>No Demonstrations</li>
+                            <li>Football</li>
+                        </ul>
+                    </div>
+                </article>
+
+                <article class="portfolio-card">
+                    <div class="media-frame">
+                        <img src="sources/k1_run_amp.gif" alt="K1 humanoid running policy animation" loading="lazy">
+                    </div>
+                    <div class="portfolio-content">
+                        <p class="meta">Booster K1 | Policy Training</p>
+                        <h3>K1 Running Policy</h3>
+                        <p>
+                            Taught Booster K1 to run using a discriminator that classified human-like
+                            motions against artificial ones, so the robot learned the style while following commands.
+                        </p>
+                        <ul class="tag-list">
+                            <li>Discriminator</li>
+                            <li>Human-Like Style</li>
+                            <li>Command Following</li>
+                        </ul>
+                    </div>
+                </article>
+
+                <article class="portfolio-card">
+                    <div class="media-frame">
+                        <img src="sources/mini_pi_run.gif" alt="Mini P humanoid running animation" loading="lazy">
+                    </div>
+                    <div class="portfolio-content">
+                        <p class="meta">Mini P | Policy Training</p>
+                        <h3>Mini P Running</h3>
+                        <p>
+                            Trained Mini P to run from generated reference motions rather than human-captured
+                            data, using drawn motion references for the robot to follow.
+                        </p>
+                        <ul class="tag-list">
+                            <li>Generated Motion</li>
+                            <li>Reference Tracking</li>
+                            <li>No Mocap</li>
+                        </ul>
+                    </div>
+                </article>
+
+                <article class="portfolio-card">
+                    <div class="media-frame">
+                        <img src="sources/MPC_RL_dog.gif" alt="Quadruped robot locomotion with hybrid MPC and reinforcement learning" loading="lazy">
+                    </div>
+                    <div class="portfolio-content">
+                        <p class="meta">Quadruped | Hybrid Control</p>
+                        <h3>MPC + RL Dog Locomotion</h3>
+                        <p>
+                            Hybrid quadruped control stack combining model predictive control and reinforcement learning.
+                        </p>
+                        <ul class="tag-list">
+                            <li>MPC</li>
+                            <li>RL</li>
+                            <li>Sim-to-Real</li>
+                        </ul>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <section id="publications" class="page-shell" aria-labelledby="publications-title">
+            <div class="section-header">
+                <h2 id="publications-title">Publications</h2>
+            </div>
+            <div class="timeline">
+                <article class="timeline-item">
+                    <p class="meta">IROS 2025</p>
+                    <h3>Achieving Precise and Reliable Locomotion with Differentiable Simulation-Based System Identification</h3>
+                    <p>First-author paper on real-robot locomotion and system identification.</p>
+                    <a class="portfolio-link" href="https://ieeexplore.ieee.org/abstract/document/11247646">Read paper</a>
+                </article>
+                <article class="timeline-item">
+                    <p class="meta">IEEE Access</p>
+                    <h3>Trajectory-based actuator identification via differentiable simulation</h3>
+                    <p>First-author paper on torque-sensor-free actuator identification.</p>
+                    <a class="portfolio-link" href="https://arxiv.org/abs/2604.10351v1">Read paper</a>
+                </article>
+                <article class="timeline-item">
+                    <p class="meta">Preprint</p>
+                    <h3>Combining model-predictive control and predictive reinforcement learning for stable quadrupedal robot locomotion</h3>
+                    <p>Research on hybrid MPC + RL control for quadruped robots.</p>
+                    <a class="portfolio-link" href="https://arxiv.org/abs/2307.07752">Read preprint</a>
+                </article>
+            </div>
+        </section>
+
+        <section id="contact" class="page-shell" aria-labelledby="contact-title">
+            <div class="contact-panel">
+                <div>
+                    <h2 id="contact-title">Contact</h2>
+                    <p>
+                        Open to robotics, reinforcement learning, sim-to-real, and research engineering opportunities.
+                    </p>
+                </div>
+                <div class="contact-details">
+                    <p>Phone: +7 904 442-51-20</p>
+                    <p>Telegram: @HunchHunter</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="page-shell">
+            Vyacheslav Kovalev - RL Engineer & Robotics Researcher
+        </div>
+    </footer>
 </body>
 </html>

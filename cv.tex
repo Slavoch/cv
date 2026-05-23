@@ -1,0 +1,81 @@
+\documentclass[11pt,a4paper]{article}
+
+\usepackage[margin=1in]{geometry}
+\usepackage[hidelinks]{hyperref}
+\usepackage{enumitem}
+
+\setlength{\parindent}{0pt}
+\setlist[itemize]{leftmargin=*, noitemsep, topsep=2pt}
+
+\newcommand{\cvsection}[1]{%
+  \vspace{10pt}
+  {\large\textbf{#1}}\\[-2pt]
+  \hrule
+  \vspace{6pt}
+}
+
+\begin{document}
+
+\begin{center}
+  {\LARGE \textbf{Vyacheslav Kovalev}}\\
+  \vspace{4pt}
+  +7 904 442-51-20 \quad
+  Telegram: \href{https://t.me/HunchHunter}{@HunchHunter} \quad
+  \textbf{Full portfolio: \href{https://slavoch.github.io/cv/}{https://slavoch.github.io/cv/}}\\
+  \textit{Additional project details, publications, and updates are available in the portfolio.}
+\end{center}
+
+\cvsection{Professional Summary}
+RL Engineer and robotics researcher with about 4 years of experience in reinforcement learning, model predictive control, and sim-to-real deployment for legged and humanoid robots. Experienced across the full robotics development cycle: simulation, policy training, C++/ROS 2 deployment, hardware validation, and publication-quality research.
+
+\cvsection{Work Experience}
+\textbf{RL Engineer} \hfill June 2024 -- Present\\
+\textit{Laboratory of Wave Processes and Controlling Systems, MIPT}
+\begin{itemize}
+  \item Developed and trained reinforcement learning policies for humanoid robots, including dynamic walking, soccer skills, balance recovery, and trajectory-following dance motions.
+  \item Built and tuned robotics simulations in NVIDIA Isaac Sim, Isaac Gym, MuJoCo, and PyBullet, including dynamics, contacts, and sensor configuration.
+  \item Deployed trained policies to real robots using high-performance C++ and ROS/ROS 2 nodes, topics, services, and hardware integration pipelines.
+  \item Reduced the sim-to-real gap for custom in-house robots using domain randomization, test-stand validation, sensor calibration, and noise filtering.
+  \item Developed a MuJoCo XLA (MJX) differentiable-simulation method for robot parameter identification using motion tracks only, without torque sensors.
+  \item Achieved a 75\% reduction in turning deviation and a 46\% increase in traveled distance on a real biped robot compared with the baseline RL policy.
+  \item Improved trajectory tracking accuracy by 1.88x on custom high-gear-ratio actuators, reducing MAE from 14.20 to 7.54 mrad.
+\end{itemize}
+
+\textbf{Research Assistant} \hfill August 2021 -- May 2023\\
+\textit{Skolkovo Institute of Science and Technology}
+\begin{itemize}
+  \item Developed a hybrid MPC + RL control algorithm for a quadruped robot, serving as the main developer of the MPC component.
+  \item Built the robot control dynamics model and implemented model predictive control in C++ with kinematic and dynamic constraints.
+  \item Completed sim-to-real transfer from Gazebo simulation to physical hardware using RL policy training, domain randomization, deployment, and real-robot validation.
+  \item Integrated control modules through ROS/ROS 2 nodes, topics, services, and actions for stable and safe operation on physical hardware.
+\end{itemize}
+
+\cvsection{Education}
+\textbf{PhD Candidate, System Analysis, Control, Information Processing, and Statistics} \hfill Expected 2027\\
+Moscow Institute of Physics and Technology
+
+\vspace{4pt}
+\textbf{MSc, Information Systems and Technologies} \hfill 2023\\
+Skolkovo Institute of Science and Technology
+
+\newpage
+
+\cvsection{Skills}
+\textbf{Advanced:} Python, PyTorch, Reinforcement Learning, Sim-to-Real, MPC, NVIDIA Isaac Sim, Isaac Gym, MuJoCo, Stable-Baselines3, PPO\\
+\textbf{Intermediate:} Linux, C++, Git, ROS/ROS 2, PyBullet, Gazebo, Docker, skrl
+
+\cvsection{Selected Publications}
+\begin{itemize}
+  \item \textbf{Achieving Precise and Reliable Locomotion with Differentiable Simulation-Based System Identification}. First-author IROS 2025 paper on real-robot locomotion and system identification: \url{https://ieeexplore.ieee.org/abstract/document/11247646}.
+  \item \textbf{Trajectory-based actuator identification via differentiable simulation}. First-author IEEE Access paper on torque-sensor-free actuator identification: \url{https://arxiv.org/abs/2604.10351v1}.
+  \item \textbf{Combining model-predictive control and predictive reinforcement learning for stable quadrupedal robot locomotion}. Preprint on hybrid MPC + RL control for quadruped robots: \url{https://arxiv.org/abs/2307.07752}.
+\end{itemize}
+
+\cvsection{Selected Project}
+\textbf{Differentiable Simulation for Robot System Identification}\\
+\href{https://wavegit.mipt.ru/Slavoch/mjx_sysid}{wavegit.mipt.ru/Slavoch/mjx\_sysid}
+\begin{itemize}
+  \item Developed a system identification approach for custom robotic hardware using differentiable simulation and real motion tracks.
+\end{itemize}
+
+\end{document}
